@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --padding: 20px;
+    --blur: 0px;
+    --base:rgb(255, 255, 255);
+    --width: 50%;
+    --border-radius: 15px;
+
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: cursive,sans-serif;
+    background:linear-gradient(120deg,#2213a5,#870385)
+}
+.container {
+    border-radius: 20px;
+    background: linear-gradient(180deg,#d60bc5,#0f1cd5);
+    box-shadow: 10px 10px 10px rgb(#000000);
+    padding: 3rem; 
+}
+h1{
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+.container-heading{
+    font-size: 2rem;
+    /* color:#000000; */
+    background-image: linear-gradient(90deg,#311492,#8c1692);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;  
+}
+.container-editing{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+label{
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: #f6f6f6;
+    margin-top: 0.5rem;
+}
+img{
+    width: var(--width);
+    align-self: center;
+    height: 80%;
+    margin-top: 1rem;
+    padding: var(--padding);
+    filter: blur(var(--blur));
+    background-color: var(--base);
+    border-radius: var(--border-radius);
+    transition: filter 0.3s ease; background-color: 0.3s ease;
+}
+input[type="color"]{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    vertical-align: middle;
+	border: none;
+    color: var(--base);
+    margin-left: 5px;
+    border-radius: 50%;
+    border:hidden;
+    outline: none;
+    cursor: pointer;
+}
+
+.color-box{
+    width: 35px;
+    height: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: none;
+    margin-left: 17px;
+    margin-top: 7px;
+
+}
+.container-heading input[type="color"]::-webkit-color-swatch{
+    border: none;
+    /* border-radius: 50%; */
+}
+.container-heading input[type="color"]::-webkit-color-swatch-wrapper{
+    padding: 0;
+    border: none;
+
+}
+input[type="range"]{
+    width:100%;
+}
+#file{
+   display: none; 
+}

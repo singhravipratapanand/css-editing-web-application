@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo editing web application</title>
+    <link rel="stylesheet" href="editing.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="container-title">Select the Image here and Edit it !</h1>
+    
+        <span class="container-heading">javascript</span>
+        <div class="container-editing">
+            <label for="base">Color</label>
+            <div class="color-box">
+                <input type="color" name="base" id="base" value="#ffffff">
+            </div>
+
+            <label for="editing-width">Width</label>
+            <input type="range" name="width" id="width" min="0" max="100" value="50" data-sizing="%">
+
+            <label for="editing-radius">Radius</label>
+            <input type="range" name="border-radius" id="border-radius" min="0" max="100" value="25" data-sizing="px">
+
+            <label for="editing-height">Padding</label>
+            <input type="range" name="padding" id="padding" min="0" max="100" value="25" data-sizing="px">
+
+            <label for="editing-blur">blur</label>
+            <input type="range" name="blur" id="blur" min="0" max="10" value="0" data-sizing="px">
+            
+        </div>
+                <label for="file">
+                <img id="image" src="https://cdn.pixabay.com/photo/2023/03/08/15/23/lake-7838004_640.jpg" alt="image for editing" ></label>
+                <input type="file" name="file" id="file" accept="image/jpeg ,image/png, image/jpg">
+         
+
+    </div>
+
+    <script src="editing.js"></script>
+</body>
+</html>
